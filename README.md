@@ -1,2 +1,2 @@
 # site
-beatygirl
+beautygirl
