@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    /* Teinte rose poudré / terracotta douce et moderne */
+    background-color: #d99187;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Barre de navigation --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.2rem 4.5rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.logo-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.logo-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #fcefed;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* Boutons de navigation */
+.btn-secondary {
+    background-color: rgba(66, 26, 22, 0.25);
+    padding: 0.75rem 1.4rem;
+    border-radius: 9999px;
+    color: #ffffff !important;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #72342c !important;
+    padding: 0.75rem 1.4rem;
+    border-radius: 9999px;
+    font-weight: 600 !important;
+}
+
+/* --- Section Principale (Hero) --- */
+.hero {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 0 5rem 4rem 5rem;
+    gap: 3rem;
+}
+
+.hero-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    max-width: 90%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.15));
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.headline {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+/* Curseur clignotant */
+.cursor {
+    font-weight: 300;
+    opacity: 0.7;
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.subheadline {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #fcefed;
+    margin-bottom: 2.2rem;
+    font-weight: 400;
+    max-width: 480px;
+}
+
+/* Bouton principal */
+.btn-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(66, 26, 22, 0.35);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.9rem 1.8rem;
+    border-radius: 9999px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-cta:hover {
+    background-color: rgba(66, 26, 22, 0.5);
+    transform: translateY(-1px);
+}
+
+.btn-cta span {
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+/* Adaptation écran mobile et tablette */
+@media (max-width: 992px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .hero-content {
+        align-items: center;
+    }
+
+    .navbar {
+        padding: 1.5rem;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
